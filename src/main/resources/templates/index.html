@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>키싱</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+    <div id="container">
+        <header class="header-container">
+            <div class="header-wrap">
+                <div class="util">
+                    <ul class="util-left">
+                        <a href="#">
+                            <li>노래방 플레이어 다운</li>
+                        </a>
+                        <a href="#">
+                            <li>키싱 이용안내</li>
+                        </a>
+                        <a href="#">
+                            <li>고객센터</li>
+                        </a>
+                    </ul>
+                    <ul class="util-right">
+                        <a href="#">
+                            <li>로그인</li>
+                        </a>
+                        <a href="#">
+                            <li>회원가입</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="logo-search">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <h1>
+                                <img src="../static/images/kysing.png">
+                            </h1>
+                        </a>
+                    </div>
+                    <div class="search">
+                        <input type="text" class="search-input">
+                        <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">KY 차트</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">PICK</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">KY CONTENTS</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">반주곡 검색</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용권 구매</a></li>
+                        <li><a href="#">마이페이지</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+        <main class="main-container">
+            <div class="main-slider">
+                <div class="bxslider">
+                    <div>
+                        <img src="../static/images/gabangpc.jpg">
+                    </div>
+                    <div>
+                        <img src="../static/images/002-2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="main-chart">
+                <div class="main-chart-left">
+                    <h3>일간 차트</h3>
+                    <ul class="main-chart-up">
+                        <li>
+                            <input type="checkbox" class="pick-checkall">
+                        </li>
+                        <li>순위</li>
+                        <li>곡번호</li>
+                        <li>곡명</li>
+                        <li>아티스트</li>
+                        <li>담기</li>
+                    </ul>
+                    <ul class="main-chart-down first">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>1</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="main-chart-down second">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>2</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="main-chart-down">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>3</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="main-chart-down">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>4</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="main-chart-down">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>5</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="main-chart-down">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>6</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="main-chart-down">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>7</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="main-chart-down">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>8</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="main-chart-down">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>9</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="main-chart-down last">
+                        <li>
+                            <input type="checkbox" class="pick-check">
+                        </li>
+                        <li>10</li>
+                        <li>28707</li>
+                        <li>사건의 지평선</li>
+                        <li>윤하</li>
+                        <li>
+                            <ul class="chart-icon">
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/chart_mic.png">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <img src="../static/images/plus.png">
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="mcl">
+                        <ul class="mcl-plus">
+                            <li>
+                                <a href="#">애창곡 담기</a>
+                                <a href="#">PICK 담기</a>
+                            </li>
+                            <li>
+                                <a href="#">차트 더보기 +</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-chart-right">
+                    <h3>K-MAGAZINE</h3>
+                    <div class="mcr">
+                        <div class="mcr-img">
+                            <img src="../static/images/ma.jpg">
+                        </div>
+                        <a href="#"></a>
+                            <p class="mcr-text">
+                                    더보기 >
+                            </p>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="main-banner">
+                <img src="../static/images/003.jpg">
+            </div>
+            <div class="main-pick">
+                <div class="main-pick-wrap">
+                    <div class="main-pick-top">
+                        <ul class="mpt-ul">
+                            <li><h3>KY PICK</h3></li>
+                            <li><a href="#">더보기 ></a></li>
+                        </ul>
+                    </div>
+                    <div class="main-pick-bottom">
+                        <ul class="mpb-ul">
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="mpb-ul">
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <ul class="mpb-ul-inner">
+                                        <li>
+                                            <img src="../static/images/kysing.png">
+                                        </li>
+                                        <li>
+                                            회원 추천곡 by bin
+                                        </li>
+                                    </ul>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main-fam">
+                <div class="main-fam-left">
+                    <h3>패밀리 사이트</h3>
+                    <ul>
+                        <li>
+                            <img src="../static/images/KY.png">
+                            금영엔터테인먼트
+                        </li>
+                        <li>
+                            <img src="../static/images/mall.png">
+                            금영 Naver TV
+                        </li>
+                        <li>
+                            <img src="../static/images/juke5.png">
+                            카타레KY스튜디오
+                        </li>
+                        <li>
+                            <img src="../static/images/i-catare.png">
+                            KY 가방
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-fam-right">
+                    <h3>SNS</h3>
+                    <ul>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="../static/images/i-blog.png">
+                                </li>
+                                <li>
+                                    <p>금영 블로그</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="../static/images/i-instagram.png">
+                                </li>
+                                <li>
+                                    <p>금영 블로그</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="../static/images/i-youtube.png">
+                                </li>
+                                <li>
+                                    <p>금영 블로그</p>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>
+                                    <img src="../static/images/i-kakao.png">
+                                </li>
+                                <li>
+                                    <p>금영 블로그</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-wrap">
+                <div class="footer-top">
+                    <ul>
+                        <a href="#">
+                            <li>반주곡신청</li>
+                        </a>
+                        <a href="#">
+                            <li>고객센터</li>
+                        </a>
+                        <a href="#">
+                            <li>원격제어</li>
+                        </a>
+                        <a href="#">
+                            <li>이용약관</li>
+                        </a>
+                        <a href="#">
+                            <li>개인정보 취급방침</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-left">
+                        <ul class="fbl-infor">
+                            <li>사업자번호 : 221-88-00319 통신판매업신고 : 제 2019-서울용산-0025 호</li>
+                            <li>주소 : 서울시 용산구 한강대로 31(한강대로31, 40-17)</li>
+                            <li>팩스 : 02-6390-2554 고객지원센터 : 02-6390-2550</li>
+                            <li>EMAIL : jmchoi@kyentertainment.kr</li>
+                        </ul>
+                        <p>KYSing 웹사이트 내에서의 이메일 무단 수집을 거부합니다.</p>
+                        <p>Copyright ⓒ 2020 금영엔터테인먼트 CO.,LTD.</p>
+                    </div>
+                    <div class="footer-bottom-right">
+                        <div class="fbr-logo">
+                            <img src="../static/images/f_logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="/static/js/account/principal.js"></script>
+    <script src="/static/js/component/header.js"></script>
+    <script src="/static/js/index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  
+    <script>
+        $(document).ready(function(){
+            $('.bxslider').bxSlider( {
+                mode: 'horizontal',// 가로 방향 수평 슬라이드
+                speed: 500,        // 이동 속도를 설정
+                pager: true,      // 현재 위치 페이징 표시 여부 설정
+                moveSlides: 1,     // 슬라이드 이동시 개수
+                slideMargin: 5,    // 슬라이드간의 간격
+                auto: true,        // 자동 실행 여부
+                autoHover: false,   // 마우스 호버시 정지 여부
+                controls: false    // 이전 다음 버튼 노출 여부
+            });
+        });
+    </script>
+</body>
+</html>
