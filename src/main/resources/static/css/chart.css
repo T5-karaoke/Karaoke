@@ -1,0 +1,35 @@
+
+.playlist-title {font-size: 16px;}
+.subpage-content-ex {margin-bottom: 30px;}
+.playlist-ex {display: flex; align-items: center; margin-bottom: 15px;}
+.playlist-ex li:first-child {margin-right: 15px;}
+
+.playlist-chart-top {display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #141414; border-bottom: 1px solid #141414; padding: 10px 5px;}
+
+.playlist-chart-down {display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #ccc; padding: 10px 5px;} 
+
+.playlist-chart-top .pct1 {width: 3%;}
+.playlist-chart-top .pct2 {width: 7%; text-align: center;} 
+
+.playlist-chart-top .pct3 {width: 5%; text-align: center;}
+.playlist-chart-top .pct4 {width: 32%; text-align: center;}
+.playlist-chart-top .pct5 {width: 9%;}
+.playlist-chart-top .pct6 {width: 11%;}
+.playlist-chart-top .pct7 {width: 11%;}
+.playlist-chart-top .pct8 {width: 9%;}
+.playlist-chart-top .pct9 {width: 4%; text-align: center;}
+.playlist-chart-top .pct10 {width: 5%; text-align: center;}
+.playlist-chart-top .pct11 {width: 4%; text-align: center;}
+
+.playlist-chart-down .pcd1 {width: 3%;}
+.playlist-chart-down .pcd2 {width: 7%; text-align: center; position: relative;}
+.playlist-chart-down .pcd2:after {content: '-'; position: absolute; top: 50%; right: 15px; transform: translateY(-50%);}
+.playlist-chart-down .pcd3 {width: 5%; text-align: center;}
+.playlist-chart-down .pcd4 {width: 32%;}
+.playlist-chart-down .pcd5 {width: 9%;}
+.playlist-chart-down .pcd6 {width: 11%;}
+.playlist-chart-down .pcd7 {width: 11%;}
+.playlist-chart-down .pcd8 {width: 9%;}
+.playlist-chart-down .pcd9 {width: 4%; text-align: center;}
+.playlist-chart-down .pcd10 {width: 5%; text-align: center;}
+.playlist-chart-down .pcd11 {width: 4%; text-align: center;}
