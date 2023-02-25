@@ -2,6 +2,20 @@ server:
   port: 8000
 
 spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            clientId: 2670562503-ddnnaohrn1slcdanr4unrevb441t61d5.apps.googleusercontent.com
+            clientSecret: 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
+            scope:
+              - email
+              - profile
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
   mvc:
     static-path-pattern: /static/**
     pathmatch:
@@ -13,6 +27,6 @@ spring:
     username: admin
     password: 1q2w3e4r
 
-  mybatis:
-    mapper-locations:
-      - /mappers/*.xml
+mybatis:
+  mapper-locations:
+    - /mappers/*.xml

@@ -8,8 +8,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BeanPropertyBindingResult;
 
-import java.beans.BeanInfo;
-import java.beans.BeanProperty;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -18,23 +16,23 @@ import java.util.Map;
 public class ValidationAop {
 
     @Pointcut("@annotation(com.korit.karaoke.aop.annotation.ValidAspect)")
-    private void pointCut(){}
+    private void pointCut() {}
 
     @Around("pointCut()")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+
         Object[] args = proceedingJoinPoint.getArgs();
 
         BeanPropertyBindingResult bindingResult = null;
 
-        for(Object arg : args){
-            if (arg.getClass() == BeanPropertyBindingResult.class){
+        for (Object arg : args) {
+            if(arg.getClass() == BeanPropertyBindingResult.class) {
                 bindingResult = (BeanPropertyBindingResult) arg;
             }
-
         }
 
-        if (bindingResult.hasErrors()){
-            Map<String, String> errorMap =new HashMap<>();
+        if (bindingResult.hasErrors()) {
+            Map<String, String> errorMap = new HashMap<>();
 
             bindingResult.getFieldErrors().forEach(error -> {
                 errorMap.put(error.getField(), error.getDefaultMessage());
@@ -46,4 +44,5 @@ public class ValidationAop {
         return proceedingJoinPoint.proceed();
 
     }
+
 }

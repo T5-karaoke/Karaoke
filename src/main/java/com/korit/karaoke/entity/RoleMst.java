@@ -12,9 +12,10 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Data
 public class RoleMst {
+
     private int roleId;
     private String roleName;
-
     private LocalDateTime createDate;
     private LocalDateTime updateDate;
+
 }

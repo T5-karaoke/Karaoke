@@ -12,12 +12,12 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @Data
 public class RoleDtl {
+
     private int roleDtlId;
     private int userId;
     private int roleId;
-
     private RoleMst roleMst;
-
     private LocalDateTime createDate;
     private LocalDateTime updateDate;
+
 }
