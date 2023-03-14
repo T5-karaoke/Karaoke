@@ -1,0 +1,146 @@
+.playlist-container{
+    margin: 0 auto;
+    width: 1240px;
+   
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.playlist-side{
+   
+   
+    width: 180px;
+
+    padding-right: 30px;
+    
+   
+}
+
+.playlist-side h3{
+    width: 150px;
+    height: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 17px;
+    color: #816DDD;
+    border-bottom: 2px solid #816DDD;
+}
+
+.playlist-side ul li{
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    
+    
+}
+
+.playlist-side ul li a{
+    width: 150px;
+    height: 30px;
+
+    display: block;
+    padding: 0px 10px;
+    margin: 10px 0; 
+    line-height: 30px;
+    
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    
+   
+   
+}
+
+.playlist-side ul li a:hover{
+    background: rgba(165,163,232,0.3);
+}
+
+.playlist-side ul li.on a{
+    background: rgba(165,163,232,0.3);
+}
+
+.playlist-content{
+    width: 1240px;
+    
+    padding-left: 30px;
+    border-left: 1px solid #dbdbdb;
+   
+}
+
+.playlist-area1{
+   
+    padding-bottom: 20px;
+}
+
+.playlist-area1 h2{
+    font-size: 35px;
+    padding-bottom: 20px;
+    color: #352d59;
+}
+
+.playlist-area1 p{
+    font-size: 15px;
+    text-align: left;
+    color: #352d59;
+
+
+}
+
+.playlist-area1 p img{
+    margin-right: 20px;
+}
+
+.playlist-area1 p span{
+    font-size: 15px;
+    color: #442CAF;
+}
+
+.playlist-area2{
+
+    
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.playlist-area2 a{
+    display: block;
+    width: 100px;
+    margin-right: 50px;
+}
+
+.playlist-area2 a img{
+    width: 100px;
+   
+}
+
+
+
+.playlist-title h3{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    color: #666666;
+}
+
+.playlist-user{
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #999999;
+    
+}
+
+.playlist-date{
+    font-size: 14px;
+    color: #999999;
+}
+
+
+
+
+

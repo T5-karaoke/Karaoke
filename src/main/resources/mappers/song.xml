@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.korit.karaoke.repository.admin.SongRepository">
+
+    <select id="searchSong" parameterType="com.korit.karaoke.web.dto.SearchReqDto" resultType="com.korit.karaoke.entity.Song.SongMst">
+        SELECT
+            song_id as songId,
+            song_code as songCode,
+            song_name as songName,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        where
+            1 = 1
+        <if test='searchValue != null and searchValue != ""'>
+            and (
+                    song_code like CONCAT('%', #{searchValue}, '%')
+                or  song_name like CONCAT('%', #{searchValue}, '%')
+                or	artist like CONCAT('%', #{searchValue}, '%')
+                or	composer like CONCAT('%', #{searchValue}, '%')
+                or	lyricist like CONCAT('%', #{searchValue}, '%')
+            )
+        </if>
+        <if test='category != null and category != ""'>
+            and	category = #{category}
+        </if>
+
+        order by
+        <choose>
+            <when test='order == "songCode"'>song_code,</when>
+            <when test='order == "songName"'>song_name,</when>
+            <when test='order == "artist"'>artist,</when>
+            <when test='order == "composer"'>composer,</when>
+            <when test='order == "lyricist"'>lyricist,</when>
+            <when test='order == "dateAsc"'>publication_date,</when>
+            <when test='order == "dateDesc"'>publication_date desc,</when>
+        </choose>
+            song_id
+        <if test='limit == "Y"'>
+            limit #{index}, #{count}
+        </if>
+    </select>
+
+    <select id="getSongTotalCount"
+            parameterType="com.korit.karaoke.web.dto.SearchNumberListReqDto"
+            resultType="Integer">
+        select
+            count(*)
+        from
+            song_mst
+        where
+        1 = 1
+        <if test='searchValue != null and searchValue != ""'>
+            and (
+            song_name like CONCAT('%', #{searchValue}, '%')
+            or	artist like CONCAT('%', #{searchValue}, '%')
+            or	composer like CONCAT('%', #{searchValue}, '%')
+            or	lyricist like CONCAT('%', #{searchValue}, '%')
+            )
+        </if>
+        <if test='category != null and category != ""'>
+            and	category = #{category}
+        </if>
+    </select>
+
+    <select id="findAllCategory" resultType="com.korit.karaoke.entity.CategoryView">
+        select
+            category_id,
+            category
+        from
+            category_view
+    </select>
+
+    <insert id="saveSong" parameterType="com.korit.karaoke.web.dto.SongReqDto">
+        insert into song_mst
+        values
+            (0, #{songCode}, #{songName}, #{artist}, #{composer}, #{lyricist}, #{publicationDate}, #{category})
+    </insert>
+
+    <update id="UpdateSongBySongCode" parameterType="com.korit.karaoke.web.dto.SongReqDto">
+        update song_mst
+        set
+            song_id = #{songId},
+            song_code = #{songCode},
+            song_name = #{songName},
+            <if test='artist != null and artist != ""'>artist = #{artist},</if>
+            <if test='composer != null and composer != ""'>composer = #{composer},</if>
+            <if test='lyricist != null and lyricist != ""'>lyricist = #{lyricist},</if>
+            <if test='publicationDate != null'>publication_date = #{publicationDate},</if>
+            category = #{category}
+        where
+            song_code = #{songCode}
+    </update>
+
+    <delete id="deleteSong">
+        delete
+        from
+            song_mst
+        where
+            song_id = #{songId}
+    </delete>
+
+    <delete id="deleteSongs" parameterType="list">
+        delete
+        from
+            song_mst
+        where
+            song_id in
+        <foreach collection="list" item="songId" open="(" close=")" separator=",">
+                #{songId}
+        </foreach>
+    </delete>
+
+    <select id="findSongBySong" resultType="com.korit.karaoke.entity.Song.SongMst">
+        select
+            song_id as songId,
+            song_code as songCode,
+            song_name as songName,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        where
+            song_code = #{songCode};
+    </select>
+
+    <select id="findSongBySongCode" resultType="com.korit.karaoke.entity.Song.SongMst">
+        select
+            song_id as songId,
+            song_code as songCode,
+            song_name as songName,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        where
+            song_code = #{songCode};
+    </select>
+
+</mapper>

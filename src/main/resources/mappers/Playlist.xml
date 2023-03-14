@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.korit.karaoke.repository.PlaylistRepository">
+
+    <select id="findPlaylistImageByImageId" resultType="com.korit.karaoke.entity.User.PlaylistImage">
+        select
+            image_id as imageId,
+            user_id as userId,
+            save_name as saveName,
+            origin_name as originName
+        from
+            playlist_image
+        where
+            image_id = #{imageId}
+    </select>
+
+    <insert id="registerPlaylistImages" parameterType="list">
+        insert into playlist_image
+        values
+        <foreach collection="list" item="file" separator=",">
+            (0, #{file.userId}, #{file.saveName}, #{file.originName})
+        </foreach>
+    </insert>
+
+    <delete id="deletePlaylistImage">
+        delete
+        from
+            playlist_image
+        where
+            image_id = #{imageId}
+    </delete>
+
+    <insert id="savePlaylistInfo" parameterType="com.korit.karaoke.web.dto.PlaylistInfoReqDto">
+        insert into playlist_info
+        values
+            (0, #{userId}, #{title}, #{introduction})
+    </insert>
+
+    <update id="UpdatePlaylistInfoByUserId" parameterType="com.korit.karaoke.web.dto.PlaylistInfoReqDto">
+        update playlist_info
+        set
+            playlist_info_id = #{playlistInfoId},
+            user_id = #{userId},
+            <if test='title != null and title != ""'>title = #{title},</if>
+            <if test='introduction != null and introduction != ""'>introduction = #{introduction}</if>
+        where
+            user_id = #{userId}
+    </update>
+
+    <insert id="SaveUserPlaylist" parameterType="com.korit.karaoke.web.dto.PlaylistDtlDto">
+        insert into playlist_dtl
+        values
+            (0, #{userId}, #{songId})
+    </insert>
+
+    <select id="findUserPlaylistByUserId" resultType="com.korit.karaoke.entity.User.PlaylistDtl">
+        select
+            playlist_dtl_id as playlistDtlId,
+            user_id as userId,
+            song_id as songId
+        from
+            playlist_dtl
+        where
+            user_id = #{userId}
+    </select>
+
+    <insert id="saveUserPlaylist" parameterType="com.korit.karaoke.web.dto.PlaylistDtlDto">
+        insert into playlist_dtl
+        values
+        (0, #{userId}, #{songId})
+    </insert>
+
+    <delete id="deleteUserPlaylist">
+        delete
+        from
+            playlist_dtl
+        where
+            song_id = #{songId}
+    </delete>
+
+
+
+
+
+</mapper>
