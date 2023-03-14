@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 노래 관리</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link rel="stylesheet" href="/static/css/subpage.css">
+    <link rel="stylesheet" href="/static/css/song/song_register.css">
+</head>
+<body>
+    <div id="container">
+        <header class="header-container">
+            <div class="header-wrap">
+                <div class="util">
+                    <ul class="util-left">
+                        <a href="#">
+                            <li>노래방 플레이어 다운</li>
+                        </a>
+                        <a href="#">
+                            <li>키싱 이용안내</li>
+                        </a>
+                        <a href="#">
+                            <li>고객센터</li>
+                        </a>
+                    </ul>
+                    <ul class="util-right">
+                        <a href="#">
+                            <li>로그인</li>
+                        </a>
+                        <a href="#">
+                            <li>회원가입</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="logo-search">
+                    <div class="logo">
+                        <a href="/index.html">
+                            <h1>
+                                <img src="/static/images/kysing.png">
+                            </h1>
+                        </a>
+                    </div>
+                    <div class="search">
+                        <input type="text" class="search-input">
+                        <button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#">KY 차트</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">PICK</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">KY CONTENTS</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">반주곡 검색</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">이용권 구매</a></li>
+                        <li><a href="#">마이페이지</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Sub-1</a></li>
+                                <li><a href="#">Sub-2</a></li>
+                                <li><a href="#">Sub-3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-container">
+                <div class="song-register-container">
+                    <h1 class="song-register-title">반주곡 정보 등록</h1>
+                    <div class="song-register-container-wrap">
+                        <div class="song-register-wrap">
+                            <div class="song-register-group">
+                                <div class="item-group">
+                                    <label class="register-label">곡번호</label>
+                                    <input type="text" class="register-input" placeholder="곡번호를 입력하세요.">
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="item-group">
+                                    <label class="register-label">곡명</label>
+                                    <input type="text" class="register-input" placeholder="곡명을 입력하세요.">
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="item-group">
+                                    <label class="register-label">아티스트</label>
+                                    <input type="text" class="register-input" placeholder="아티스트를 입력하세요.">
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="item-group">
+                                    <label class="register-label">작곡가</label>
+                                    <input type="text" class="register-input" placeholder="작곡가를 입력하세요.">
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="item-group">
+                                    <label class="register-label">작사가</label>
+                                    <input type="text" class="register-input" placeholder="작사가를 입력하세요.">
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="item-group">
+                                    <label class="register-label">출시일</label>
+                                    <input type="date" class="register-input" placeholder="출시일을 입력하세요.">
+                                    <div class="error-message"></div>
+                                </div>
+                                <div class="item-group">
+                                    <label class="register-label">장르</label>
+                                    <select class="register-input category-select"></select>
+                                    <div class="error-message"></div>
+                                </div>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" class="register-button">등록하기</button>
+                                <button type="button" class="return-button">돌아가기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>        
+
+        <footer>
+            <div class="footer-wrap">
+                <div class="footer-top">
+                    <ul>
+                        <a href="#">
+                            <li>반주곡신청</li>
+                        </a>
+                        <a href="#">
+                            <li>고객센터</li>
+                        </a>
+                        <a href="#">
+                            <li>원격제어</li>
+                        </a>
+                        <a href="#">
+                            <li>이용약관</li>
+                        </a>
+                        <a href="#">
+                            <li>개인정보 취급방침</li>
+                        </a>
+                    </ul>
+                </div>
+                <div class="footer-bottom">
+                    <div class="footer-bottom-left">
+                        <ul class="fbl-infor">
+                            <li>사업자번호 : 221-88-00319 통신판매업신고 : 제 2019-서울용산-0025 호</li>
+                            <li>주소 : 서울시 용산구 한강대로 31(한강대로31, 40-17)</li>
+                            <li>팩스 : 02-6390-2554 고객지원센터 : 02-6390-2550</li>
+                            <li>EMAIL : jmchoi@kyentertainment.kr</li>
+                        </ul>
+                        <p>KYSing 웹사이트 내에서의 이메일 무단 수집을 거부합니다.</p>
+                        <p>Copyright ⓒ 2020 금영엔터테인먼트 CO.,LTD.</p>
+                    </div>
+                    <div class="footer-bottom-right">
+                        <div class="fbr-logo">
+                            <img src="/static/images/f_logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/static/js/song/song_register.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.korit.karaoke.repository.LikeRepository">
+
+    <insert id="addLike" parameterType="com.korit.karaoke.entity.Song.SongLike">
+        insert into
+            song_like
+        values
+            (0, #{userId}, #{songId})
+    </insert>
+
+    <delete id="deleteLike" parameterType="com.korit.karaoke.entity.Song.SongLike">
+        delete
+        from
+            song_like
+        where
+            song_id = #{songId}
+        and user_id = #{userId}
+    </delete>
+
+    <select id="getLikeStatus" resultType="Integer" parameterType="com.korit.karaoke.entity.Song.SongLike">
+        select
+            count(*)
+        from
+            song_like
+        where
+            song_id = #{songId}
+        and user_id = #{userId}
+    </select>
+
+    <select id="getLikeCount" resultType="Integer">
+        select
+            count(*)
+        from
+            song_like
+        where
+            song_id = #{songId}
+
+    </select>
+    
+
+
+</mapper>
