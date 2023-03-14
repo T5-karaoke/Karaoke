@@ -1,0 +1,144 @@
+.song-search-container {
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+.song-search-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.song-search-container-wrap {
+    background: rgb(90, 199, 255, .05);
+    border-radius: 40px;
+    box-shadow: 3px 0 rgb(0 0 0 / 7%);
+    padding: 50px 25px;
+}
+
+.song-search-wrap {
+    border: 1px solid #ccc;
+    width: 100% !important;
+    padding-top: 40px;
+}
+
+.song-search-wwrap {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.content-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.content-items button {
+    border: 2px solid #8195df;
+    background-color: #fff;
+    border-radius: 4px;
+    width: 100px;
+    height: 30px;
+}
+
+.content-items button:hover {
+    background-color: #8195df;
+    color: #fff;
+    transition: all 0.2s;
+}
+
+.content-items .category-select, .content-items .main-search-input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.content-items .category-select {
+    height: 30px;
+}
+
+.table-container-wrap {
+    width: 100%;
+    height: 423px;
+}
+
+.table-container {
+    border: 1px solid #ccc;
+    width: 100%;
+    height: auto;
+}
+
+.content-table {
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.content-table th, .content-table td {
+    border: 1px solid #ccc;
+    height: 20px;
+    text-align: center;
+}
+
+.content-table td .fa-solid {
+    cursor: pointer;
+}
+
+
+
+
+.page-controller {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.page-numbers {
+    display: flex;
+}
+
+.page-controller a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0px 5px;
+    border: 1px solid #8195df;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.page-controller .prev-button, .page-controller .next-button {
+    width: 40px;
+}
+
+.page-controller a:hover {
+    background-color: #8195df;
+    color: white;
+}
+
+.page-controller .disabled {
+    background-color: #8195df;
+    color: white;
+    cursor: default;
+}
+
+
+
+
+
+
+
+
+
+

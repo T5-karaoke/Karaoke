@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.korit.karaoke.Repository.SearchRepository">
+
+    <select id="userSearchSongName"
+            parameterType="com.korit.karaoke.web.dto.SongSearchDto"
+            resultType="com.korit.karaoke.entity.Song.SongMst">
+        select
+            sum(count(distinct song_name)) over() as songNameCount,
+            song_id as songId,
+            song_name as songName,
+            song_code as songCode,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        where
+            1 = 1
+            and song_name = #{searchValue}
+        <if test="searchValue != null and searchValue != ''">
+            or song_name like concat('%', #{searchValue}, '%')
+            group by song_name
+        </if>
+            limit #{count};
+    </select>
+
+
+
+    <select id="userSearchArtist"
+            parameterType="com.korit.karaoke.web.dto.SongSearchDto"
+            resultType="com.korit.karaoke.entity.Song.SongMst">
+        select
+            sum(count(distinct artist)) over() as artistCount,
+            song_id as songId,
+            song_name as songName,
+            song_code as songCode,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        where
+            1 = 1
+            and artist = #{searchValue}
+            <if test="searchValue != null and searchValue != ''">
+                or artist like concat('%', #{searchValue}, '%')
+                group by artist
+            </if>
+
+            limit #{count};
+    </select>
+
+    <select id="userSearchSongCode"
+            parameterType="com.korit.karaoke.web.dto.SongSearchDto"
+            resultType="com.korit.karaoke.entity.Song.SongMst">
+        select
+            sum(count(distinct song_code)) over() as songCodeCount,
+            song_id as songId,
+            song_name as songName,
+            song_code as songCode,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        where
+            1 = 1
+            and song_code = #{searchValue}
+            <if test="searchValue != null and searchValue != ''">
+                or song_code like concat('%', #{searchValue}, '%')
+                group by song_code
+            </if>
+
+            limit #{count};
+    </select>
+
+    <select id="userSearchComposer"
+            parameterType="com.korit.karaoke.web.dto.SongSearchDto"
+            resultType="com.korit.karaoke.entity.Song.SongMst">
+        select
+            sum(count(distinct composer)) over() as composerCount,
+            song_id as songId,
+            song_name as songName,
+            song_code as songCode,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        where
+            1 = 1
+            and composer = #{searchValue}
+            <if test="searchValue != null and searchValue != ''">
+                or composer like concat('%', #{searchValue}, '%')
+                group by composer
+            </if>
+
+            limit #{count};
+    </select>
+
+    <select id="userSearchLyricist"
+            parameterType="com.korit.karaoke.web.dto.SongSearchDto"
+            resultType="com.korit.karaoke.entity.Song.SongMst">
+        select
+            sum(count(distinct lyricist)) over() as lyricistCount,
+            song_id as songId,
+            song_name as songName,
+            song_code as songCode,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        where
+            1 = 1
+            and lyricist = #{searchValue}
+            <if test="searchValue != null and searchValue != ''">
+                or lyricist like concat('%', #{searchValue}, '%')
+                group by lyricist
+            </if>
+
+            limit #{count};
+    </select>
+
+
+
+    <select id="userRecentList"
+            parameterType="com.korit.karaoke.web.dto.SongSearchDto"
+            resultType="com.korit.karaoke.entity.Song.SongMst">
+        select
+            song_id as songId,
+            song_name as songName,
+            song_code as songCode,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        order by publication_date desc
+        limit #{count};
+    </select>
+
+
+
+
+    <select id="userPopularityList"
+            parameterType="com.korit.karaoke.web.dto.SongSearchDto"
+            resultType="com.korit.karaoke.entity.Song.SongMst">
+        select
+            song_id as songId,
+            song_name as songName,
+            song_code as songCode,
+            artist,
+            composer,
+            lyricist,
+            publication_date as publicationDate,
+            category
+        from
+            song_mst
+        where
+            1 = 1
+            order by songId asc
+            limit 10;
+    </select>
+
+
+
+
+</mapper>

@@ -1,0 +1,104 @@
+.subpage {
+    margin: 0 auto;
+    width: 1240px;
+   
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.subpage-sidemenu {
+   
+   
+    width: 180px;
+
+    padding-right: 30px;
+    
+   
+}
+
+.subpage-sidemenu h3{
+    width: 150px;
+    height: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 17px;
+    color: #816DDD;
+    border-bottom: 2px solid #816DDD;
+}
+
+.subpage-sidemenu ul li{
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    
+    
+}
+
+.subpage-sidemenu ul li a{
+    width: 150px;
+    height: 30px;
+
+    display: block;
+    padding: 0px 10px;
+    margin: 10px 0; 
+    line-height: 30px;
+    
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    
+   
+   
+}
+
+.subpage-sidemenu ul li a:hover{
+    background: rgba(165,163,232,0.3);
+}
+
+.subpage-sidemenu ul li.on a{
+    background: rgba(165,163,232,0.3);
+}
+
+.subpage-content {
+    width: 1240px;
+    
+    padding-left: 30px;
+    border-left: 1px solid #dbdbdb;
+   
+}
+
+.subpage-content-title{
+   
+    padding-bottom: 30px;
+}
+
+.subpage-content-title h2{
+    font-size: 35px;
+    color: #352d59;
+}
+
+.subpage-content-title p{
+    font-size: 15px;
+    text-align: left;
+    color: #352d59;
+
+
+}
+
+.subpage-content-title p img{
+    margin-right: 20px;
+}
+
+.subpage-content-title p span{
+    font-size: 15px;
+    color: #442CAF;
+}
+
+
+
+

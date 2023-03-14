@@ -1,0 +1,372 @@
+tbody p{
+    margin: 10px;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.playlist-container{
+    margin: 0 auto;
+    width: 1240px;
+   
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: flex-start;
+}
+.playlist-side{
+    width: 180px;
+    padding-right: 30px;
+}
+
+.playlist-side h3{
+    width: 150px;
+    height: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-size: 17px;
+    color: #816DDD;
+    border-bottom: 2px solid #816DDD;
+}
+
+.playlist-side ul li{
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    line-height: 20px;
+    border-bottom: 1px solid #dbdbdb;
+    
+    
+}
+
+.playlist-side ul li a{
+    width: 150px;
+    height: 30px;
+
+    display: block;
+    padding: 0px 10px;
+    margin: 10px 0; 
+    line-height: 30px;
+    
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    
+   
+   
+}
+
+.playlist-side ul li a:hover{
+    background: rgba(165,163,232,0.3);
+}
+
+.playlist-side ul li.on a{
+    background: rgba(165,163,232,0.3);
+}
+
+.playlist-content{
+    width: 1240px;
+    
+    padding-left: 30px;
+    border-left: 1px solid #dbdbdb;
+   
+}
+.playlist-area1{
+    width: 100%;
+}
+
+.playlist-area1 h2{
+    width: 100%;
+
+    font-size: 35px;
+    padding-bottom: 20px;
+    color: #352d59;
+}
+
+.playlist-area1 p{
+    font-size: 15px;
+    text-align: left;
+    color: #352d59;
+
+
+}
+
+.playlist-area1 p img{
+    margin-right: 20px;
+}
+
+.playlist-area1 p span{
+    font-size: 15px;
+    color: #442CAF;
+}
+
+
+
+.playlist-maintext{
+    display: flex;
+
+    margin-bottom: 23px;
+}
+
+.playlist-maintext h3{
+    font-size: 15px;
+    font-weight: 400;
+    padding-left: 15px;
+}
+
+.playlist-maintext b{
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.playlist-subtext{
+    display: flex;
+    width: 100%;
+
+    margin-bottom: 23px;
+}
+
+.playlist-sub1{
+    width: 56%;
+}
+.playlist-sub1 p{
+    font-size: 15px;
+    font-weight: 400;
+}
+.playlist-sub2{
+    width: 38%;
+}
+
+
+.search-bar-button{
+    box-sizing: border-box;
+}
+
+.search-bar-button li{
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid #8195df;
+    color: #8195df;
+
+    padding: 0 20px;
+    margin-right: 10px;
+    box-shadow: 1px 1px 2px;
+}
+.search-bar-button li.on{
+    background-color: #8195df;
+}
+.search-bar-button li.on a{
+    color: #fff;
+}
+
+.search-bar-button a{
+    font-size: 15px;
+    color: #8195df;
+}
+
+.search-tap{
+    margin-bottom: 50px;
+}
+
+.search_tit{
+    border-bottom: 1px solid #dbdbdb;
+    
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+
+}
+.search_tit a{
+    font-size: 15px;
+    font-weight: 600;
+}
+.no_results{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #F6F5FA7D;
+}
+.no_results .art_name{
+    display: inline-block;
+    width: 50%;
+    padding: 0 10px;
+    margin: 0;
+}
+.no_results p{
+    display: inline-block;
+    width: 50%;
+    padding: 0 10px;
+    margin: 0;
+
+    color: #816DDD;
+}
+.no_results a{
+    font-size: 14px;
+    color: #8195df;
+    font-weight: normal;
+}
+.content-table {
+    width: 100%;
+}
+
+.content-table th, .content-table td {
+    height: 21px;
+    text-align: left;
+
+    padding: 7px 3px;
+}
+
+.content-table td .fa-solid {
+    cursor: pointer;
+}
+
+
+.content-main{
+    border-top: 1px solid #202020;
+    border-bottom: 1px solid #202020;
+
+}
+.content-list1{
+    border-bottom: 1px solid #dbdbdb;
+}
+.songName tbody p{
+    font-size: 16px;
+    color: #816DDD;
+}
+.artist tbody p{
+    font-size: 16px;
+    color: #816DDD;
+}
+.songcode tbody p{
+    font-size: 16px;
+    color: #816DDD;
+}
+.composer tbody p{
+    font-size: 16px;
+    color: #816DDD;
+}
+.lyricist tbody p{
+    font-size: 16px;
+    color: #816DDD;
+}
+.content-list1 .content-song-name{
+    text-align: left;
+    align-items: center;
+}
+.content-song-name{
+    width: 25%;
+}
+.content-song-name img{
+    float: right;
+    /* margin: 3px 5px 0 3px; */
+}
+
+.chart_list-end{
+    width: 100%;
+    border-top: 2px solid #333;
+    /* background-color: #f2f2f2; */
+    
+}
+.chart_list-end a{
+    font-size: 15px;
+}
+.chart_list-comment{
+    width: 100%;
+    background-color: #333;
+}
+.chart_list-end li:first-child{
+    display: flex;
+    align-items: center;
+    float: left;
+    
+    padding: 4px 0 5px;
+    padding-left: 30px;
+    color: #8195df;
+    box-sizing: border-box;
+}
+
+.chart_list-end li:last-child{
+    display: flex;
+    float: right;
+
+    padding: 4px 0 5px;
+    padding-left: 30px;
+    color: #8195df;
+    box-sizing: border-box;
+}
+.search_more{
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+}
+
+.search_more a {
+
+    margin-top: 10px;
+    border-radius: 20px 0 20px 20px;
+    border: 1px solid #8195df;
+    color: #8195df;
+    padding: 0 10px;
+    font-size: 14px;
+    
+}
+
+
+
+.search_songname_tit{
+    display: flex;
+    width: 100%;
+}
+.search_songname_tit p{
+    display: inline-block;
+    float: right;
+    margin-top: 30px;
+}
+
+.search_artist_tit{
+    display: flex;
+    width: 100%;
+}
+.search_artist_tit p{
+    display: inline-block;
+    float: right;
+    margin-top: 30px;
+}
+
+.search_songcode_tit{
+    display: flex;
+    width: 100%;
+}
+.search_songcode_tit p{
+    display: inline-block;
+    float: right;
+    margin-top: 30px;
+}
+.search_composer_tit{
+    display: flex;
+    width: 100%;
+}
+.search_composer_tit p{
+    display: inline-block;
+    float: right;
+    margin-top: 30px;
+}
+
+.search_lyricist_tit{
+    display: flex;
+    width: 100%;
+}
+.search_lyricist_tit p{
+    display: inline-block;
+    float: right;
+    margin-top: 30px;
+}
+.search-count{
+    color: #816DDD;
+}

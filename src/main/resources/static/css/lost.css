@@ -1,0 +1,4 @@
+.register-group label:after {content: none;}
+.register-submit {margin-top: 0;}
+.lost-button {display: flex; justify-content: space-between;}
+.lost-button button {width: 49%;}
